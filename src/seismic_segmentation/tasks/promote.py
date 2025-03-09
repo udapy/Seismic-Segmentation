@@ -52,7 +52,7 @@ def run(config):
             config_path = model_dir / "config.yaml"
 
             # Load checkpoint
-            checkpoint = torch.load(checkpoint_path, map_location="cpu", weight_only=True) # nosec
+            checkpoint = torch.load(checkpoint_path, map_location="cpu", weight_only=True)  # nosec
 
             # Load config
             if config_path.exists():

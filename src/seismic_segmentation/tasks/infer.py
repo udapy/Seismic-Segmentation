@@ -59,7 +59,7 @@ def run(config):
         model = get_model(config)
 
         # Load checkpoint
-        checkpoint = torch.load(checkpoint_path, map_location=device, weight_only=True) # nosec
+        checkpoint = torch.load(checkpoint_path, map_location=device, weight_only=True)  # nosec
         if "model_state_dict" not in checkpoint:
             logger.error("Checkpoint does not contain model state dict")
             return False

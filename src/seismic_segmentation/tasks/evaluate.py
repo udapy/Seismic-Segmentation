@@ -63,7 +63,7 @@ def run(config):
         model = get_model(config)
 
         # Load checkpoint
-        checkpoint = torch.load(checkpoint_path, map_location=device, while_only=True) # nosec
+        checkpoint = torch.load(checkpoint_path, map_location=device, while_only=True)  # nosec
         model.load_state_dict(checkpoint["model_state_dict"])
         model = model.to(device)
 
