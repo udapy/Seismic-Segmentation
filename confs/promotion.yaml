@@ -1,0 +1,13 @@
+# confs/promotion.yaml
+# Model promotion configuration
+task: promote
+models_dir: output/training
+output_dir: models/production
+
+# Evaluation criteria for promotion
+primary_metric: mean_iou  # mean_iou, accuracy, f1_score, loss
+threshold:
+  mean_iou: 0.7
+
+# Version control
+version: auto  # auto or specific version

@@ -1,0 +1,15 @@
+# confs/evaluation.yaml
+# Evaluation configuration
+task: evaluate
+model_path: output/training/seismic_unet_training/checkpoints/best_model.pth
+data_dir: data/NZ_PM_seismic_dataset
+processed_data_dir: processed_data
+output_dir: evaluations/seismic_unet
+
+# Split to evaluate on
+split: test
+
+# Visualization settings
+visualize_all: false
+visualize_n: 10
+save_predictions: true

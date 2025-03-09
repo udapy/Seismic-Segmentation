@@ -1,0 +1,26 @@
+# Preprocessing configuration
+task: preprocess
+data_dir: data/NZ_PM_seismic_dataset
+output_dir: processed_data
+
+# Dataset settings
+patch_size: 128  # Reduce patch size to better match data dimensions
+
+# Source data settings
+use_source_splits: true  # Set to true to use existing train/validation splits in source data
+
+# Dataset splitting (used only if use_source_splits is false)
+train_ratio: 0.8
+val_ratio: 0.1
+test_ratio: 0.1
+seed: 42
+
+# Preprocessing options
+remove_first_crossline: true
+rescale_seismic: true
+rescale_range: [-1.0, 1.0]
+
+# Output options
+format: h5  # Output format (h5 or numpy)
+save_examples: true
+examples_per_split: 5

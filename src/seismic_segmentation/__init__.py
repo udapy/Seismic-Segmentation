@@ -1,1 +1,4 @@
-"""Seismic Image Segmentation: A baseline UNet with ResNet-34 encoder and Advanced Transformer-based SAGModel (with LoRA, ViTEncoder, PromptEncoder, and MaskDecoder)."""
+# src/seismic_segmentation/__init__.py
+"""Seismic Segmentation Package."""
+
+__version__ = "0.1.0"

@@ -1,0 +1,26 @@
+{
+    "0": {
+        "name": "Slope Mudstone B",
+        "color": [35, 92, 167]
+    },
+    "1": {
+        "name": "Slope Mudstone A",
+        "color": [125, 180, 213]
+    },
+    "2": {
+        "name": "Submarine Canyon System",
+        "color": [219, 241, 247]
+    },
+    "3": {
+        "name": "Slope Valley",
+        "color": [254, 219, 124]
+    },
+    "4": {
+        "name": "Mass Transport Deposit",
+        "color": [252, 120, 59]
+    },
+    "5": {
+        "name": "Basement/Other",
+        "color": [208, 10, 0]
+    }
+}

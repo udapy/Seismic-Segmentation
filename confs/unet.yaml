@@ -1,0 +1,4 @@
+# Extend default config with UNet-specific settings
+experiment_name: "unet_resnet34"
+model_type: "unet"
+pretrained: true

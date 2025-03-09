@@ -1,0 +1,10 @@
+# Extend default config with SAG-specific settings
+experiment_name: "sag_model"
+model_type: "sag"
+# Hyperparameters specific to SAG
+lr: 0.00005
+embed_dim: 768
+num_layers: 6
+patch_size: 16
+prompt_dim: 256
+hidden_dim: 512

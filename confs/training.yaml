@@ -1,0 +1,39 @@
+# Training configuration
+task: train
+experiment_name: seismic_unet_training
+data_dir: data/NZ_PM_seismic_dataset
+processed_data_dir: processed_data
+output_dir: output/training
+
+# Dataset settings
+n_classes: 6
+#patch_size: 64 #64 #256
+img_size: 64
+use_patches: true
+
+# Model settings
+model_type: sag
+embed_dim: 768
+num_heads: 12  # Must be a divisor of embed_dim (768/12=64)
+num_layers: 6
+patch_size: 64  # Must divide img_size evenly
+prompt_dim: 256
+hidden_dim: 512
+
+# Training settings
+batch_size: 8
+epochs: 5
+lr: 0.0001
+weight_decay: 0.0001
+optimizer: adamw  # adamw or sgd
+scheduler: cosine  # plateau or cosine
+loss_type: focal  # ce, dice, focal, or combined
+
+# Augmentation settings
+augmentation: true
+
+# Logging settings
+log_interval: 10
+save_interval: 5
+visualize_interval: 20
+num_workers: 4

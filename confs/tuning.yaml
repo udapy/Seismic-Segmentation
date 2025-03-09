@@ -1,0 +1,46 @@
+# confs/tuning.yaml
+# Hyperparameter tuning configuration
+task: tune
+experiment_name: seismic_unet_tuning
+data_dir: data/NZ_PM_seismic_dataset
+processed_data_dir: processed_data
+output_dir: output/tuning
+
+# Dataset settings
+n_classes: 6
+patch_size: 256
+use_patches: true
+
+# Model options
+model_type: unet  # unet or sag
+pretrained: true
+
+# Tuning settings
+tuning_method: optuna
+n_trials: 20
+n_jobs: 1
+metric: val_mean_iou  # val_loss, val_mean_iou, val_accuracy, val_f1_score
+direction: maximize  # maximize or minimize
+
+# Parameters to tune
+params:
+  lr:
+    type: float
+    low: 1e-5
+    high: 1e-3
+    log: true
+  weight_decay:
+    type: float
+    low: 1e-6
+    high: 1e-3
+    log: true
+  loss_type:
+    type: categorical
+    choices: [ce, dice, focal, combined]
+  batch_size:
+    type: categorical
+    choices: [4, 8, 16]
+
+# Training settings for each trial
+epochs: 10
+save_interval: 10

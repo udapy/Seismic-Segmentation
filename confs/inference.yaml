@@ -1,0 +1,14 @@
+# confs/inference.yaml
+# Inference configuration
+task: infer
+model_path: output/training/seismic_unet_training/checkpoints/best_model.pth
+data_dir: data/NZ_PM_seismic_dataset
+processed_data_dir: processed_data
+output_dir: predictions/seismic_unet
+
+# Split to run inference on
+split: test
+
+# Output settings
+save_raw: true
+save_vis: true
